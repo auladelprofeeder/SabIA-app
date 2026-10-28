@@ -17,8 +17,8 @@ jobs:
           python-version: '3.12'
       - run: pip install pypdf
       - run: python tools/dividir_pdfs.py
-      - run: |
-          mkdir _site
+           - run: |
+          mkdir -p _site qr juegos vendor icons content
           cp -R index.html descargar.html style.css manifest.json sw.js js vendor icons qr content juegos _site/
       - uses: actions/upload-pages-artifact@v3
         with:
