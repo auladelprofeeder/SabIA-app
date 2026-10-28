@@ -1,0 +1,6 @@
+{
+  "appId": "co.edu.sabia.app",
+  "appName": "SabIA",
+  "webDir": "www",
+  "server": { "androidScheme": "https" }
+}

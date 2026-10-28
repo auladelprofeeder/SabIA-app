@@ -1,0 +1,9 @@
+{
+  "name": "sabia", "version": "1.0.0", "private": true,
+  "scripts": {
+    "pdfjs": "npm i pdfjs-dist@3.11.174 && mkdir -p vendor/pdfjs && cp node_modules/pdfjs-dist/build/pdf.min.js node_modules/pdfjs-dist/build/pdf.worker.min.js vendor/pdfjs/",
+    "dividir": "python3 tools/dividir_pdfs.py",
+    "build": "rm -rf www && mkdir www && cp -R index.html style.css manifest.json js vendor icons content juegos www/",
+    "android": "npm run dividir && npm run build && npx cap sync android"
+  }
+}

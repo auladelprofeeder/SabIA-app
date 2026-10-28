@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Descarga SabIA</title>
+<style>
+body{font-family:system-ui,sans-serif;background:#F7F5FF;color:#2D2A4A;margin:0;padding:20px;text-align:center}
+.wrap{max-width:720px;margin:auto}h1{color:#8B5CF6}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.card{background:#fff;border-radius:22px;padding:22px;box-shadow:0 6px 20px rgba(139,92,246,.15)}
+.card img{width:180px;height:180px}
+a.btn{display:inline-block;margin:10px 0;padding:14px 22px;border-radius:26px;color:#fff;font-weight:800;text-decoration:none;
+ background:linear-gradient(120deg,#FF3D81,#8B5CF6)}
+a.btn.b{background:linear-gradient(120deg,#3B82F6,#14D8C4)}
+small{color:#6B6890;display:block;margin-top:8px;line-height:1.4}
+</style></head><body><div class="wrap">
+<h1>🤖 SabIA</h1><p>Tu tutor de Matemáticas de 6° a 11°</p>
+<div class="grid">
+ <div class="card"><h2>📱 Android</h2><img id="qa" alt="QR APK"><br>
+  <a class="btn" id="apk">Descargar APK</a>
+  <small>Al abrir el archivo, Android pedirá permitir "instalar apps de esta fuente". Acepta solo si la descargaste de este enlace.</small></div>
+ <div class="card"><h2>💻 PC o iPhone</h2><img id="qw" alt="QR web"><br>
+  <a class="btn b" id="web">Abrir la app web</a>
+  <small>Se abre en el navegador y se puede instalar: en iPhone usa Safari &gt; Compartir &gt; Añadir a pantalla de inicio.</small></div>
+</div></div>
+<script src="js/sitio.js"></script>
+<script>
+document.getElementById('apk').href='https://github.com/'+SITIO.usuario+'/'+SITIO.repo+'/releases/latest/download/sabia.apk';
+document.getElementById('web').href='https://'+SITIO.usuario+'.github.io/'+SITIO.repo+'/';
+document.getElementById('qa').src='qr/qr_apk.png';document.getElementById('qw').src='qr/qr_web.png';
+</script></body></html>
